@@ -69,7 +69,7 @@ import io.swagger.annotations.ApiParam;
  */
 @Controller
 @RequestMapping("/jformOrderTicket2Controller")
-@Api(value="JformOrderTicket2",description="订单机票信息",tags="jformOrderTicket2Controller")
+//@Api(value="JformOrderTicket2",description="订单机票信息",tags="jformOrderTicket2Controller")
 public class JformOrderTicket2Controller extends BaseController {
 	private static final Logger logger = LoggerFactory.getLogger(JformOrderTicket2Controller.class);
 
@@ -378,7 +378,7 @@ public class JformOrderTicket2Controller extends BaseController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="订单机票信息列表信息",produces="application/json",httpMethod="GET")
+//	@ApiOperation(value="订单机票信息列表信息",produces="application/json",httpMethod="GET")
 	public ResponseMessage<List<JformOrderTicket2Entity>> list() {
 		List<JformOrderTicket2Entity> listJformOrderTicket2s=jformOrderMain2Service.getList(JformOrderTicket2Entity.class);
 		return Result.success(listJformOrderTicket2s);
@@ -386,7 +386,7 @@ public class JformOrderTicket2Controller extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="根据ID获取订单机票信息信息",notes="根据ID获取订单机票信息信息",httpMethod="GET",produces="application/json")
+//	@ApiOperation(value="根据ID获取订单机票信息信息",notes="根据ID获取订单机票信息信息",httpMethod="GET",produces="application/json")
 	public ResponseMessage<?> get(@ApiParam(required=true,name="id",value="ID")@PathVariable("id") String id) {
 		JformOrderTicket2Entity task = jformOrderMain2Service.get(JformOrderTicket2Entity.class, id);
 		if (task == null) {
@@ -397,7 +397,7 @@ public class JformOrderTicket2Controller extends BaseController {
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="创建订单机票信息")
+//	@ApiOperation(value="创建订单机票信息")
 	public ResponseMessage<?> create(@ApiParam(name="订单机票信息对象")@RequestBody JformOrderTicket2Entity jformOrderTicket2, UriComponentsBuilder uriBuilder) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderTicket2Entity>> failures = validator.validate(jformOrderTicket2);
@@ -417,7 +417,7 @@ public class JformOrderTicket2Controller extends BaseController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="更新订单机票信息",notes="更新订单机票信息")
+//	@ApiOperation(value="更新订单机票信息",notes="更新订单机票信息")
 	public ResponseMessage<?> update(@ApiParam(name="订单机票信息对象")@RequestBody JformOrderTicket2Entity jformOrderTicket2) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderTicket2Entity>> failures = validator.validate(jformOrderTicket2);
@@ -439,7 +439,7 @@ public class JformOrderTicket2Controller extends BaseController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@ApiOperation(value="删除订单机票信息")
+//	@ApiOperation(value="删除订单机票信息")
 	public ResponseMessage<?> delete(@ApiParam(name="id",value="ID",required=true)@PathVariable("id") String id) {
 		logger.info("delete[{}]" , id);
 		// 验证

@@ -65,7 +65,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @RequestMapping("/tsBlackListController")
-@Api(value = "测试用黑名单服务", description = "测试用黑名单服务接口", tags = "sysBlackAPI")
+//@Api(value = "测试用黑名单服务", description = "测试用黑名单服务接口", tags = "sysBlackAPI")
 public class TsBlackListController extends BaseController {
 	private static final Logger logger = LoggerFactory.getLogger(TsBlackListController.class);
 	
@@ -335,7 +335,7 @@ public class TsBlackListController extends BaseController {
 	}
 	
 	
-	@ApiOperation(value = "黑名单列表数据", produces = "application/json", httpMethod = "GET")
+//	@ApiOperation(value = "黑名单列表数据", produces = "application/json", httpMethod = "GET")
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseMessage<List<TsBlackListEntity>> list(HttpServletRequest request, HttpServletResponse response) {
@@ -350,7 +350,7 @@ public class TsBlackListController extends BaseController {
 		return Result.success(listTsBlackLists);
 	}
 
-	@ApiOperation(value = "根据ID获取黑名单信息", notes = "根据ID获取黑名单信息", httpMethod = "GET", produces = "application/json")
+//	@ApiOperation(value = "根据ID获取黑名单信息", notes = "根据ID获取黑名单信息", httpMethod = "GET", produces = "application/json")
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseMessage<?> get(@PathVariable("id") String id,HttpServletRequest request) {
@@ -366,7 +366,7 @@ public class TsBlackListController extends BaseController {
 		return Result.success(task);
 	}
 
-	@ApiOperation(value = "创建黑名单")
+//	@ApiOperation(value = "创建黑名单")
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseMessage<?> create(@RequestBody TsBlackListEntity tsBlackList,HttpServletRequest request) {
@@ -395,7 +395,7 @@ public class TsBlackListController extends BaseController {
 		return Result.success(tsBlackList);
 	}
 
-	@ApiOperation(value = "更新黑名单", notes = "更新黑名单")
+//	@ApiOperation(value = "更新黑名单", notes = "更新黑名单")
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
 	public ResponseMessage<?> update(@RequestBody TsBlackListEntity tsBlackList,HttpServletRequest request) {
@@ -425,7 +425,7 @@ public class TsBlackListController extends BaseController {
 		return Result.success(tsBlackList);
 	}
 
-	@ApiOperation(value = "删除黑名单")
+//	@ApiOperation(value = "删除黑名单")
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseBody
 	public ResponseMessage<?> delete(@PathVariable("id") String id,HttpServletRequest request) {

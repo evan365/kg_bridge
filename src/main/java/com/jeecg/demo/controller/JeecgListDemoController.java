@@ -99,7 +99,7 @@ import com.jeecg.demo.service.JeecgDemoServiceI;
  */
 @Controller
 @RequestMapping("/jeecgListDemoController")
-@Api(value="JeecgDemo",description="Angular JeecgDemo接口",tags="AngularJeecgDemoAPI")
+//@Api(value="JeecgDemo",description="Angular JeecgDemo接口",tags="AngularJeecgDemoAPI")
 public class JeecgListDemoController extends BaseController {
 	private static final Logger logger = LoggerFactory.getLogger(JeecgListDemoController.class);
 	//【例子】报表例子
@@ -1146,7 +1146,7 @@ public class JeecgListDemoController extends BaseController {
 	 */
 	@RequestMapping(value="/list",method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="jeecgDemo列表信息",produces="application/json",httpMethod="GET")
+//	@ApiOperation(value="jeecgDemo列表信息",produces="application/json",httpMethod="GET")
 	public ResponseMessage<Map<String,Object>> list(@RequestParam("pageNo") int pageNo, @RequestParam("pageSize") int pageSize,JeecgDemoEntity entity,HttpServletRequest request, HttpServletResponse response, DataGrid dataGrid) {
 		InterfaceRuleDto interfaceRuleDto = InterfaceUtil.getInterfaceRuleDto(request, InterfaceEnum.jeecgdemo_list);
 		if(interfaceRuleDto==null){
@@ -1168,7 +1168,7 @@ public class JeecgListDemoController extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="根据ID获取jeecgDemo信息",notes="根据ID获取jeecgDemo信息",httpMethod="GET",produces="application/json")
+//	@ApiOperation(value="根据ID获取jeecgDemo信息",notes="根据ID获取jeecgDemo信息",httpMethod="GET",produces="application/json")
 	public ResponseMessage<?> get(@ApiParam(required=true,name="id",value="ID")@PathVariable("id") String id,HttpServletRequest request) {
 		InterfaceRuleDto interfaceRuleDto = InterfaceUtil.getInterfaceRuleDto(request, InterfaceEnum.jeecgdemo_get);
 		if(interfaceRuleDto==null){
@@ -1183,7 +1183,7 @@ public class JeecgListDemoController extends BaseController {
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="创建jeecgDemo")
+//	@ApiOperation(value="创建jeecgDemo")
 	public ResponseMessage<?> create(@ApiParam(name="jeecgDemo对象")@RequestBody JeecgDemoEntity jeecgDemo, UriComponentsBuilder uriBuilder,HttpServletRequest request) {
 		InterfaceRuleDto interfaceRuleDto = InterfaceUtil.getInterfaceRuleDto(request, InterfaceEnum.jeecgdemo_add);
 		if(interfaceRuleDto==null){
@@ -1210,7 +1210,7 @@ public class JeecgListDemoController extends BaseController {
 
 	@RequestMapping(method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="更新jeecgDemo",notes="更新jeecgDemo")
+//	@ApiOperation(value="更新jeecgDemo",notes="更新jeecgDemo")
 	public ResponseMessage<?> update(@RequestBody JeecgDemoEntity jeecgDemo,HttpServletRequest request) {
 		InterfaceRuleDto interfaceRuleDto = InterfaceUtil.getInterfaceRuleDto(request, InterfaceEnum.jeecgdemo_edit);
 		if(interfaceRuleDto==null){
@@ -1236,7 +1236,7 @@ public class JeecgListDemoController extends BaseController {
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	@ApiOperation(value="删除jeecgDemo")
+//	@ApiOperation(value="删除jeecgDemo")
 	@ResponseBody
 	public ResponseMessage<?> delete(@ApiParam(name="id",value="ID",required=true)@PathVariable("id") String id,HttpServletRequest request) {
 		InterfaceRuleDto interfaceRuleDto = InterfaceUtil.getInterfaceRuleDto(request, InterfaceEnum.jeecgdemo_delete);

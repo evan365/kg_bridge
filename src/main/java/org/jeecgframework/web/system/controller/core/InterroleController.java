@@ -62,7 +62,7 @@ import org.springframework.web.servlet.ModelAndView;
  * @version V1.0
  *
  */
-@Api(value = "Interrole", description = "t_s_interrole", tags = "interroleController")
+//@Api(value = "Interrole", description = "t_s_interrole", tags = "interroleController")
 @Controller
 @RequestMapping("/interroleController")
 public class InterroleController extends BaseController {

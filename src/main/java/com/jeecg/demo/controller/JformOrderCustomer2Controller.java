@@ -69,7 +69,7 @@ import io.swagger.annotations.ApiParam;
  */
 @Controller
 @RequestMapping("/jformOrderCustomer2Controller")
-@Api(value="JformOrderCustomer2",description="订单客户信息",tags="jformOrderCustomer2Controller")
+//@Api(value="JformOrderCustomer2",description="订单客户信息",tags="jformOrderCustomer2Controller")
 public class JformOrderCustomer2Controller extends BaseController {
 	private static final Logger logger = LoggerFactory.getLogger(JformOrderCustomer2Controller.class);
 
@@ -386,7 +386,7 @@ public class JformOrderCustomer2Controller extends BaseController {
 	
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="订单客户信息列表信息",produces="application/json",httpMethod="GET")
+//	@ApiOperation(value="订单客户信息列表信息",produces="application/json",httpMethod="GET")
 	public ResponseMessage<List<JformOrderCustomer2Entity>> list() {
 		List<JformOrderCustomer2Entity> listJformOrderCustomer2s=jformOrderMain2Service.getList(JformOrderCustomer2Entity.class);
 		return Result.success(listJformOrderCustomer2s);
@@ -394,7 +394,7 @@ public class JformOrderCustomer2Controller extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="根据ID获取订单客户信息信息",notes="根据ID获取订单客户信息信息",httpMethod="GET",produces="application/json")
+//	@ApiOperation(value="根据ID获取订单客户信息信息",notes="根据ID获取订单客户信息信息",httpMethod="GET",produces="application/json")
 	public ResponseMessage<?> get(@ApiParam(required=true,name="id",value="ID")@PathVariable("id") String id) {
 		JformOrderCustomer2Entity task = jformOrderMain2Service.get(JformOrderCustomer2Entity.class, id);
 		if (task == null) {
@@ -405,7 +405,7 @@ public class JformOrderCustomer2Controller extends BaseController {
 
 	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="创建订单客户信息")
+//	@ApiOperation(value="创建订单客户信息")
 	public ResponseMessage<?> create(@ApiParam(name="订单客户信息对象")@RequestBody JformOrderCustomer2Entity jformOrderCustomer2, UriComponentsBuilder uriBuilder) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderCustomer2Entity>> failures = validator.validate(jformOrderCustomer2);
@@ -425,7 +425,7 @@ public class JformOrderCustomer2Controller extends BaseController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="更新订单客户信息",notes="更新订单客户信息")
+//	@ApiOperation(value="更新订单客户信息",notes="更新订单客户信息")
 	public ResponseMessage<?> update(@ApiParam(name="订单客户信息对象")@RequestBody JformOrderCustomer2Entity jformOrderCustomer2) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderCustomer2Entity>> failures = validator.validate(jformOrderCustomer2);
@@ -447,7 +447,7 @@ public class JformOrderCustomer2Controller extends BaseController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@ApiOperation(value="删除订单客户信息")
+//	@ApiOperation(value="删除订单客户信息")
 	public ResponseMessage<?> delete(@ApiParam(name="id",value="ID",required=true)@PathVariable("id") String id) {
 		logger.info("delete[{}]" , id);
 		// 验证

@@ -15,10 +15,10 @@
 				<td class="value"><input type="radio" value="bootstrap" name="indexStyle" /> <span>BootStrap风格</span></td>
 			</tr>
 			-->
-			<tr>
+			<!-- <tr>
 				<td class="value"><input type="radio" value="acele" name="indexStyle"  /><span>ACE平面风格</span></td>
-			</tr>
-			<tr>
+			</tr> -->
+			<!-- <tr>
 				<td class="value"><input type="radio" value="shortcut" name="indexStyle" /> <span>ShortCut风格</span></td>
 			</tr>
 			<tr>
@@ -26,7 +26,7 @@
 			</tr>
 			<tr>
 				<td class="value"><input type="radio" value="sliding" name="indexStyle"  /><span>Sliding云桌面</span></td>
-			</tr>
+			</tr> -->
 			
 			<!-- 
 			<tr>
@@ -36,12 +36,12 @@
 				<td class="value"><input type="radio" value="diy" name="indexStyle"  /><span>DIY平面风格</span></td>
 			</tr>
 			  -->
-			<tr>
+			<!-- <tr>
 				<td class="value"><input type="radio" value="hplus" name="indexStyle"  /><span>H+平面风格</span></td>
 			</tr>
 			<tr>
 				<td class="value"><input type="radio" value="fineui" name="indexStyle"  /><span>FineUI风格</span></td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td class="value"><input type="radio" value="adminlte" name="indexStyle"  /><span>AdminLTE风格</span></td>
 			</tr>

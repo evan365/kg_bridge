@@ -49,9 +49,8 @@
           <div class="center">
             <h1 id="id-text2" class="grey">
               <i class="ace-icon fa fa-leaf green"></i>
-               JEECG 演示系统
+               Bridge系统
             </h1>
-            <h4 class="blue" id="id-company-text">www.jeecg.org</h4>
           </div>
           <div class="space-6"></div>
           <div class="position-relative">
@@ -76,15 +75,15 @@
 									<i class="ace-icon fa fa-user"></i>
 								</span>
                       </label>
-                      <label class="block clearfix">
+                       <label class="block clearfix">
 								<span class="block input-icon input-icon-right">
 									<input type="password" name="password" class="form-control" placeholder="请输入密码" id="password" value="123456"/>
 									<i class="ace-icon fa fa-lock"></i>
 								</span>
                       </label>
                       <label class="block clearfix">
-                        <div class="input-group">
-                          <input type="text" style="width:150px" name="randCode" class="form-control" placeholder="请输入验证码"  id="randCode"/>
+                        <div class="input-group" style="display: none;">
+                          <input type="text" style="width:150px" name="randCode" class="form-control" placeholder="请输入验证码"  id="randCode" value="abcd"/>
                           <span class="input-group-addon" style="padding: 0px;"><img id="randCodeImage" src="randCodeImage"  /></span>
                         </div>
                       </label>
@@ -94,30 +93,18 @@
                           <input type="checkbox" class="ace" id="on_off"  name="remember" value="yes"/>
                           <span class="lbl">记住用户名</span>
                         </label>
-                        <span> | <a href="http://demo.jeecg.org/mLoginController.do?login&from=singlemessage&isappinstalled=0"><i class="ace-icon fa fa-location-arrow"></i><font color='#428bca'>移动OA</font></a></span>
-                         <span> | <a href="http://yun.jeecg.org" target="_blank"><i class="ace-icon fa fa-cube"></i><font color='#428bca'>插件中心</font></a></span>
                         <button type="button" id="but_login"  onclick="checkUser()" class="width-35 pull-right btn btn-sm btn-primary">
                           <i class="ace-icon fa fa-key"></i>
                           <span class="bigger-110" >登录</span>
                         </button>
-                        <a href="loginController.do?goResetPwdMail" class="btn btn-link">忘记密码 ?</a>
                       </div>
                       <div class="space-4"></div>
 
                 </div>
-                <div class="toolbar clearfix">
-                  <div style="float: right">
-                    <a href="#"  class="forgot-password-link">
-                    	  语言
-                      <i class="ace-icon fa fa-arrow-right"></i>
-                      <t:dictSelect id="langCode" field="langCode" typeGroupCode="lang" hasLabel="false" extendJson="{style:'padding:2px; width:80px;'}" defaultVal="zh-cn"></t:dictSelect>
-                    </a>
-                  </div>
-                </div>
                 </form>
               </div>
             </div>
-            <div class="center"><h4 class="blue" id="id-company-text">&copy; JEECG版权所有 v_3.8</h4></div>
+            <div class="center"><h4 class="blue" id="id-company-text">&copy; 常州金蝶软件有限公司版权所有 </h4></div>
             <div class="navbar-fixed-top align-right">
               <br />
               &nbsp;

@@ -76,7 +76,7 @@ import com.jeecg.demo.service.JformOrderMainServiceI;
  */
 @Controller
 @RequestMapping("/jformOrderMainController")
-@Api(value="orderMainRest",description="一对多订单管理",tags="JformOrderMainController")
+//@Api(value="orderMainRest",description="一对多订单管理",tags="JformOrderMainController")
 public class JformOrderMainController extends BaseController {
 	/**
 	 * Logger for this class
@@ -454,7 +454,7 @@ public class JformOrderMainController extends BaseController {
  	
  	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="订单列表信息",produces="application/json",httpMethod="GET")
+//	@ApiOperation(value="订单列表信息",produces="application/json",httpMethod="GET")
 
  	public List<JformOrderMainPage> list() {
 		List<JformOrderMainEntity> list= jformOrderMainService.getList(JformOrderMainEntity.class);
@@ -484,7 +484,7 @@ public class JformOrderMainController extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="根据ID获取订单信息",notes="根据ID获取订单信息",httpMethod="GET",produces="application/json")
+//	@ApiOperation(value="根据ID获取订单信息",notes="根据ID获取订单信息",httpMethod="GET",produces="application/json")
 	public ResponseEntity<?> get(@PathVariable("id") String id) {
 		JformOrderMainEntity task = jformOrderMainService.get(JformOrderMainEntity.class, id);
 		if (task == null) {
@@ -509,7 +509,7 @@ public class JformOrderMainController extends BaseController {
  	
  	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="创建订单")
+//	@ApiOperation(value="创建订单")
 	public ResponseEntity<?> create(@ApiParam(value="订单信息")@RequestBody JformOrderMainPage jformOrderMainPage, UriComponentsBuilder uriBuilder) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderMainPage>> failures = validator.validate(jformOrderMainPage);
@@ -542,7 +542,7 @@ public class JformOrderMainController extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="更新订单",notes="更新订单")
+//	@ApiOperation(value="更新订单",notes="更新订单")
 	public ResponseEntity<?> update(@ApiParam(value="订单信息")@RequestBody JformOrderMainPage jformOrderMainPage) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderMainPage>> failures = validator.validate(jformOrderMainPage);
@@ -570,7 +570,7 @@ public class JformOrderMainController extends BaseController {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@ApiOperation(value="删除订单")
+//	@ApiOperation(value="删除订单")
 	public void delete(@PathVariable("id") String id) {
 		JformOrderMainEntity jformOrderMain = jformOrderMainService.get(JformOrderMainEntity.class, id);
 		jformOrderMainService.delMain(jformOrderMain);

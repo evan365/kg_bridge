@@ -33,7 +33,7 @@ import io.swagger.annotations.ApiOperation;
 
 @Controller
 @RequestMapping("/cgFormDataController")
-@Api(value = "online表单服务", description = "online表单接口", tags = "onlineFormAPI")
+//@Api(value = "online表单服务", description = "online表单接口", tags = "onlineFormAPI")
 public class CgFormDataController {
 	@Autowired
 	private DataBaseService dataBaseService;
@@ -50,7 +50,7 @@ public class CgFormDataController {
 	 * @return
 	 */
 	//@RequestMapping(params = "getFormInfo")
-	@ApiOperation(value = "根据tableName和记录ID获取online表单详细信息", produces = "application/json", httpMethod = "GET")
+//	@ApiOperation(value = "根据tableName和记录ID获取online表单详细信息", produces = "application/json", httpMethod = "GET")
 	@RequestMapping(value="/get/{tableName}/{id}",method = RequestMethod.GET)
 	@ResponseBody
 	public TableJson getFormInfo(@PathVariable("tableName") String tableName,@PathVariable("id") String id,HttpServletRequest request, HttpServletResponse response) {
@@ -112,7 +112,7 @@ public class CgFormDataController {
 	 * @return
 	 */
 	//@RequestMapping(params = "deleteFormInfo")
-	@ApiOperation(value = "根据tableName和记录ID删除一条记录")
+//	@ApiOperation(value = "根据tableName和记录ID删除一条记录")
 	@RequestMapping(value="/delete/{tableName}/{id}",method = RequestMethod.DELETE)
 	@ResponseBody
 	public TableJson deleteFormInfo(@PathVariable("tableName") String tableName,@PathVariable("id") String id, HttpServletRequest request, HttpServletResponse response) {
@@ -154,7 +154,7 @@ public class CgFormDataController {
 	 * @return
 	 */
 	@RequestMapping(value = "add",method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(value="增加一条记录")
+//	@ApiOperation(value="增加一条记录")
 	@ResponseBody 
 	public TableJson addFormInfo(@RequestBody JSONObject body,HttpServletRequest request, HttpServletResponse response) {
 		//Map map = JSONHelper.json2Map(body);
@@ -236,7 +236,7 @@ public class CgFormDataController {
 	 * @return
 	 */
 	@RequestMapping(value = "update",method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-	@ApiOperation(value="修改一条记录")
+//	@ApiOperation(value="修改一条记录")
 	@ResponseBody
 	public TableJson updateFormInfo(@RequestBody JSONObject body, HttpServletRequest request, HttpServletResponse response) {
 		//Map map = JSONHelper.json2Map(body);

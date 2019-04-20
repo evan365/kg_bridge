@@ -8,8 +8,8 @@
 	<meta name="renderer" content="webkit|ie-comp|ie-stand">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta http-equiv="Cache-Control" content="no-siteapp" />
-	<meta name="keywords" content="JEECG 企业级快速开发平台">
-    <meta name="description" content="JEECG 企业级快速开发平台，她采用强大代码生成，在线开发能力">
+	<meta name="keywords" content="<t:mutiLang langKey="jeect.platform"/>" />
+	<meta name="description" content="<t:mutiLang langKey="jeect.platform"/>" />
 	<title><t:mutiLang langKey="jeect.platform"/></title>
 	<!-- Bootstrap 3.3.7 -->
 	<link rel="stylesheet" href="plug-in/themes/adminlte/css/bootstrap.min.css">
@@ -39,7 +39,7 @@
     <a href="#" class="logo">
       <span class="logo-mini"><b>A</b>LT</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><img alt="image" width="190" height="68" style="margin: -9px 0px 0px -16px;" src="plug-in/login/images/jeecg-aceplus.png" /></span>
+      <!-- <span class="logo-lg"><img alt="image" width="190" height="68" style="margin: -9px 0px 0px -16px;" src="plug-in/login/images/jeecg-aceplus.png" /></span> -->
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
@@ -70,11 +70,6 @@
                   <li>
                     <a href="javascript:createdetailwindow('<t:mutiLang langKey="common.ssms.getSysInfos"/>','tSSmsController.do?goMySmsList',800,400)" title="系统消息">
                       <i class="fa fa-users text-aqua"></i> 系统消息
-                    </a>
-                  </li>
-                  <li>
-                    <a href="javascript:window.open('http://yun.jeecg.org')" title="云应用中心">
-                      <i class="fa fa-warning text-yellow"></i> 云应用中心
                     </a>
                   </li>
                   <li>
@@ -320,15 +315,6 @@
         </div>
     </div>
     <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <div class="pull-right hidden-xs">
-      <b>Version</b> <t:mutiLang langKey="system.version.number"/>
-    </div>
-    <t:mutiLang langKey="common.copyright"/>
-    <a href="http://www.jeecg.org" title="JEECG Framework  <t:mutiLang langKey="system.version.number"/>">JEECG Framework  <t:mutiLang langKey="system.version.number"/></a>
-           (推荐谷歌浏览器，获得更快响应速度) 技术支持:
-           <a href="#" title="JEECG Framework  <t:mutiLang langKey="system.version.number"/>">JEECG Framework  <t:mutiLang langKey="system.version.number"/></a>
-  </footer>
 
   <!-- Control Sidebar -->
   <aside id="control-sidebar" class="control-sidebar control-sidebar-dark">

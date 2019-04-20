@@ -62,7 +62,7 @@ import net.sf.jxls.transformer.XLSTransformer;
  */
 @Controller
 @RequestMapping("/jeecgDemoExcelController")
-@Api(value="JeecgDemoExcel",description="excel导入导出测试表",tags="jeecgDemoExcelController")
+//@Api(value="JeecgDemoExcel",description="excel导入导出测试表",tags="jeecgDemoExcelController")
 public class JeecgDemoExcelController extends BaseController {
 	private static final Logger logger = LoggerFactory.getLogger(JeecgDemoExcelController.class);
 

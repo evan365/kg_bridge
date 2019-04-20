@@ -71,7 +71,7 @@ import io.swagger.annotations.ApiParam;
  * @version V1.0   
  *
  */
-@Api(value="JformOrderMain2",description="订单主信息",tags="jformOrderMain2Controller")
+//@Api(value="JformOrderMain2",description="订单主信息",tags="jformOrderMain2Controller")
 @Controller
 @RequestMapping("/jformOrderMain2Controller")
 public class JformOrderMain2Controller extends BaseController {
@@ -458,7 +458,7 @@ public class JformOrderMain2Controller extends BaseController {
 	
  	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="订单主信息列表信息",produces="application/json",httpMethod="GET")
+//	@ApiOperation(value="订单主信息列表信息",produces="application/json",httpMethod="GET")
 	public ResponseMessage<List<JformOrderMain2Page>> list() {
 		List<JformOrderMain2Entity> list= jformOrderMain2Service.getList(JformOrderMain2Entity.class);
     	List<JformOrderMain2Page> pageList=new ArrayList<JformOrderMain2Page>();
@@ -486,7 +486,7 @@ public class JformOrderMain2Controller extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	@ResponseBody
-	@ApiOperation(value="根据ID获取订单主信息信息",notes="根据ID获取订单主信息信息",httpMethod="GET",produces="application/json")
+//	@ApiOperation(value="根据ID获取订单主信息信息",notes="根据ID获取订单主信息信息",httpMethod="GET",produces="application/json")
 	public ResponseMessage<?> get(@ApiParam(required=true,name="id",value="ID")@PathVariable("id") String id) {
 		JformOrderMain2Entity task = jformOrderMain2Service.get(JformOrderMain2Entity.class, id);
 		if (task == null) {
@@ -511,7 +511,7 @@ public class JformOrderMain2Controller extends BaseController {
  	
  	@RequestMapping(method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="创建订单主信息")
+//	@ApiOperation(value="创建订单主信息")
 	public ResponseMessage<?> create(@ApiParam(name="订单主信息对象")@RequestBody JformOrderMain2Page jformOrderMain2Page, UriComponentsBuilder uriBuilder) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderMain2Page>> failures = validator.validate(jformOrderMain2Page);
@@ -537,7 +537,7 @@ public class JformOrderMain2Controller extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.PUT, consumes = MediaType.APPLICATION_JSON_VALUE)
 	@ResponseBody
-	@ApiOperation(value="更新订单主信息",notes="更新订单主信息")
+//	@ApiOperation(value="更新订单主信息",notes="更新订单主信息")
 	public ResponseMessage<?> update(@RequestBody JformOrderMain2Page jformOrderMain2Page) {
 		//调用JSR303 Bean Validator进行校验，如果出错返回含400错误码及json格式的错误信息.
 		Set<ConstraintViolation<JformOrderMain2Page>> failures = validator.validate(jformOrderMain2Page);
@@ -564,7 +564,7 @@ public class JformOrderMain2Controller extends BaseController {
 	
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
-	@ApiOperation(value="删除订单主信息")
+//	@ApiOperation(value="删除订单主信息")
 	public ResponseMessage<?> delete(@ApiParam(name="id",value="ID",required=true)@PathVariable("id") String id) {
 		logger.info("delete[{}]" , id);
 		// 验证
